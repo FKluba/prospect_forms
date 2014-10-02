@@ -5,6 +5,7 @@ class Admin
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
+key: username, String
+key: password, String
 
 end
