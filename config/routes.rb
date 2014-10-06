@@ -1,16 +1,16 @@
 ProspectForms::Application.routes.draw do
-  resources :answers
-  get '/new_answer' => "answers#new"
+  resources :forms
 
+
+  devise_for :admins
+
+
+  resources :answers
 
   resources :users
-  get '/new_user' => "users#new"
-
 
   resources :questions
-  get '/new_question' => "questions#new"
 
-  resources :posts
 
   get "/home" => "application#home"
   get "/index" => "application#home"

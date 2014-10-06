@@ -11,6 +11,12 @@ gem 'bson_ext'
 gem 'devise',    '~> 1.4.7'
 gem 'mm-devise', '~> 1.2.0'
 
+gem "twitter-bootstrap-rails"
+
+gem "cocoon"
+
+gem 'simple_form'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

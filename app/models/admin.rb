@@ -5,7 +5,7 @@ class Admin
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-key: username, String
-key: password, String
+  # Les paramètres sont email (de type email, requiert une adresse valide)
+  # et password (mot de passe de 6 lettres minimum)
 
 end

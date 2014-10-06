@@ -1,0 +1,26 @@
+<%= simple_form_for(@form) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description, hint: 'Rapide description du formulaire' %>
+  </div>
+
+ 
+  <h3> Questions </h3>
+  <div id="questions"
+    <%= f.simple_fields_for :questions do |question| %>
+    <%#= raise question.object.inspect %>
+  
+      <%= render 'question_fields', :f => question %>
+    <% end %> 
+    <div class="links">
+      <%#= link_to_add_association 'add question', f, :questions %>
+    </div>
+      <%#= render :partial => "monli", :locals => {:test => "ok"} %>
+  </div> 
+  
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

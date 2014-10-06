@@ -12,6 +12,7 @@
  *= require_tree .
  */
 
+
 .title {
 	text-align: center;
 	font-size: 30px;
@@ -22,14 +23,25 @@
 	text-align: center;
 }
 
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
 .list {
 	width: 10%;
 	border: 1px solid black;
-	position: relative;
-	text-align: center;
+	position: absolute;
 	left: 45%;
 }
 
 .list li {
 	font-size: 15px;
+}
+
+#nav_float_right {
+	float: right;
 }
