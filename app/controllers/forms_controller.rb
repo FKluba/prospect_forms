@@ -40,8 +40,13 @@ class FormsController < ApplicationController
   # POST /forms
   # POST /forms.json
   def create
-    @form = Form.new(params[:form])
+    params[:form][:questions] = params[:form][:questions_attributes].values
+    params[:form].delete :questions_attributes
 
+    @form = Form.new(params[:form])
+    #raise @form.questions.inspect
+    #raise params[:form].inspect  #raise to inspect params
+    #raise @form.questions.inspect
     respond_to do |format|
       if @form.save
         format.html { redirect_to @form, notice: 'Form was successfully created.' }
@@ -56,6 +61,8 @@ class FormsController < ApplicationController
   # PUT /forms/1
   # PUT /forms/1.json
   def update
+    #params[:form][:questions] = params[:form][:questions_attributes].values
+    #params[:form].delete :questions_attributes
     @form = Form.find(params[:id])
 
     respond_to do |format|

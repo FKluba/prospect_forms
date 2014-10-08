@@ -8,6 +8,8 @@ gem 'rails', '3.2.16'
 gem 'mongo_mapper'
 gem 'bson_ext'
 
+#gem "mongo_mapper-accepts_nested_attributes", :require => "mongo_mapper/accepts_nested_attributes"
+
 gem 'devise',    '~> 1.4.7'
 gem 'mm-devise', '~> 1.2.0'
 
@@ -16,6 +18,7 @@ gem "twitter-bootstrap-rails"
 gem "cocoon"
 
 gem 'simple_form'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
