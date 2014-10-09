@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/dfabreguette-ap/mm-nested-attrs
+  revision: ea5a29357ffd2ad13aac130d2a74305c3e53ad91
+  specs:
+    mm-nested-attrs (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -110,7 +116,7 @@ GEM
     simple_form (2.1.1)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    sprockets (2.2.2.backport2)
+    sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -143,6 +149,7 @@ DEPENDENCIES
   devise (~> 1.4.7)
   jquery-rails
   mm-devise (~> 1.2.0)
+  mm-nested-attrs!
   mongo_mapper
   rails (= 3.2.16)
   sass-rails (~> 3.2.3)

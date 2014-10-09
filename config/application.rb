@@ -61,6 +61,9 @@ module ProspectForms
     
     Dir[File.join(Rails.root, "lib", "core_ext", "*.rb")].each {|l| require l }
 
+    config.autoload_paths << Rails.root.join('lib')
+
+
     # Enable the asset pipeline
     config.assets.enabled = true
 
