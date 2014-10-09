@@ -30,4 +30,5 @@ jQuery ->
 
 
     jQuery(new_nested_fields_container).find("input:text").val("")
+    console.log(jQuery(new_nested_fields_container));
     jQuery(new_nested_fields_container).appendTo("#questions")
