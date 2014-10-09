@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/dfabreguette-ap/mm-nested-attrs
-  revision: ea5a29357ffd2ad13aac130d2a74305c3e53ad91
+  revision: 6ff472c8b588a1aec074f2faa33e378e7e16ed91
   specs:
     mm-nested-attrs (0.0.1)
 

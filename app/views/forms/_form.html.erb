@@ -6,19 +6,19 @@
       <%= f.input :description %>
     </div>
 
-
     <h3> Questions </h3>
-    <div id="questions">
-      <%= f.simple_fields_for :questions do |question| %>
-          <%#= raise question.object.inspect %>
-          <%= render 'question_fields', :f => question %>
-      <% end %>
-      <%#= link_to_add_association 'add question', f, :questions %>
-      <%#= render :partial => "monli", :locals => {:test => "ok"} %>
+
+    <div class="sub-form">
+        <div id="questions">
+          <%= f.simple_fields_for :questions do |question| %>
+              <%= render 'question_fields', :f => question %>
+          <% end %>
+        </div>
+        <div id="add_question" class="sub-form-add">
+          Ajouter une question
+        </div>
     </div>
-    <div id="add_question">
-      Ajouter une question
-    </div>
+
     <div class="form-actions">
       <%= f.button :submit %>
     </div>
