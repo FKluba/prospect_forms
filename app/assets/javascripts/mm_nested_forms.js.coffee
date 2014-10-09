@@ -18,7 +18,6 @@
 
 
 
-
 @get_nested_fields_attr_wrapper = (nested_fields_container, input, fingerprint) ->
   name_attr_wrapper = ""
   if typeof(input) == "undefined"
@@ -70,8 +69,6 @@ jQuery ->
 
         new_name_attr = get_nested_fields_attr_wrapper(new_nested_fields_container, jQuery(this), new_nested_fields_fingerprint)
         jQuery(this).attr("name", new_name_attr)
-
-
 
 
 
