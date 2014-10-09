@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/dfabreguette-ap/mm-nested-attrs
-  revision: 6ff472c8b588a1aec074f2faa33e378e7e16ed91
+  revision: 3d1763ee61ee22269477990a5c0686b9d4769608
   specs:
-    mm-nested-attrs (0.0.1)
+    mm-nested-attrs (0.0.2)
 
 GEM
   remote: https://rubygems.org/
