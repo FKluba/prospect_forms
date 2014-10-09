@@ -36,6 +36,7 @@ class FormsController < ApplicationController
   # GET /forms/1/edit
   def edit
     @form = Form.find(params[:id])
+    @form.questions.build if @form and @form.questions.blank?
   end
 
   # POST /forms
