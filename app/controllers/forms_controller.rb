@@ -26,6 +26,7 @@ class FormsController < ApplicationController
   def new
     @form = Form.new
     @form.questions.build
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @form }
@@ -40,11 +41,11 @@ class FormsController < ApplicationController
   # POST /forms
   # POST /forms.json
   def create
-    params[:form][:questions] = params[:form][:questions_attributes].values
-    params[:form].delete :questions_attributes
+    # params[:form][:questions] = params[:form][:questions_attributes].values
+    # params[:form].delete :questions_attributes
 
     @form = Form.new(params[:form])
-    #raise @form.questions.inspect
+    #raise @form.inspect
     #raise params[:form].inspect  #raise to inspect params
     #raise @form.questions.inspect
     respond_to do |format|

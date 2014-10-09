@@ -11,19 +11,28 @@
 
 
 jQuery ->
-	jQuery("#add_question").click ->
-		new_nested_fields_container = jQuery(".nested-fields").clone().first()
+  jQuery("#add_question").click ->
+    new_nested_fields_container = jQuery(".nested-fields").clone().first()
 
-		new_nested_fields = jQuery(new_nested_fields_container).find('input, select, textarea')
-		new_nested_fields_fingerprint = Date.now()
-		name_attr_regexp = /(^.*\[.*_attributes\]\[)(.*)(\]\[.*\]$)/g	
-		
-		jQuery(new_nested_fields).each ->
-			name_attr = jQuery(this).attr('name')
-			regexp_results = name_attr_regexp.exec(name_attr)
-			new_name_attr = regexp_results[1] + new_nested_fields_fingerprint + regexp_results[3]
-			jQuery(this).attr("name", new_name_attr)
-			
-		
-		jQuery(new_nested_fields_container).find("input:text").val("")
-		jQuery(new_nested_fields_container).appendTo("#questions")
+    new_nested_fields = jQuery(new_nested_fields_container).find('input, select, textarea')
+    new_nested_fields_fingerprint = Date.now()
+    name_attr_regexp = /(^.*\[.*_attributes\]\[)(.*)(\]\[.*\]$)/
+
+
+    jQuery(new_nested_fields).each ->
+      name_attr = jQuery(this).attr('name')
+
+      # Find and remove id field
+      id_regexp = /\[id\]$/
+      is_and_id_field = id_regexp.exec(name_attr)
+
+      if is_and_id_field != null
+        jQuery(this).remove()
+      else
+        regexp_results = name_attr_regexp.exec(name_attr)
+        new_name_attr = regexp_results[1] + new_nested_fields_fingerprint + regexp_results[3]
+        jQuery(this).attr("name", new_name_attr)
+
+
+    jQuery(new_nested_fields_container).find("input:text").val("")
+    jQuery(new_nested_fields_container).appendTo("#questions")
