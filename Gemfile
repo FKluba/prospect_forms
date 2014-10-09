@@ -19,6 +19,8 @@ gem "cocoon"
 
 gem 'simple_form'
 
+gem "font-awesome-rails"
+
 gem 'mm-nested-attrs', :git => "https://github.com/dfabreguette-ap/mm-nested-attrs"
 
 # Gems used only for assets and not required

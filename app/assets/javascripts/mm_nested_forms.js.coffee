@@ -3,16 +3,11 @@
 #{"name"=>"defze", "description"=>"grgre", "tasks_attributes"=>{"0"=>{"description"=>"task1", "done"=>"0", "_destroy"=>"1", "id"=>"2"}, "1"=>{"description"=>"task2", "done"=>"0", "_destroy"=>"", "id"=>"3"}}}
 
 
-#Actual result, not correct
-#{"name"=>"rrr", "description"=>"rrezrez", "questions_attributes"=>{"0"=>{"question"=>"fqsdfdsq"}}}
-
-#New result, correct one
-#{"name"=>"", "description"=>"", "questions_attributes"=>{"0"=>{"question"=>"test"}, "1412772466476"=>{"question"=>"test"}, "1412772475993"=>{"question"=>"test"}, "1412772482409"=>{"question"=>"test"}}}
-
 
 jQuery ->
   jQuery("#add_question").click ->
     new_nested_fields_container = jQuery(".nested-fields").clone().first()
+    console.log(new_nested_fields_container)
 
     new_nested_fields = jQuery(new_nested_fields_container).find('input, select, textarea')
     new_nested_fields_fingerprint = Date.now()
