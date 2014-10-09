@@ -11,20 +11,16 @@
   <div id="questions"
     <%= f.simple_fields_for :questions do |question| %>
     <%#= raise question.object.inspect %>
-      <div id="q_test">
-      <%= render 'question_fields', :f => question %>
-      </div>
+    
+    <%= render 'question_fields', :f => question %>
+    
     <% end %>
-    <div id="suppr_question">
-      Supprimer dernière question
-    </div>
     <div id="add_question">
       Ajouter une question
     </div>
       <%#= link_to_add_association 'add question', f, :questions %>
       <%#= render :partial => "monli", :locals => {:test => "ok"} %>
   </div>
-  
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

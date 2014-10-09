@@ -2,16 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#add_question{
+#add_question {
 	margin-top: 10px;
 }
 
-#add_question:hover{
+#add_question:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-#suppr_question:hover{
-	cursor: pointer;
-	text-decoration: underline;
+.img {
+	float: right;
 }

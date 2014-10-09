@@ -27,12 +27,3 @@ jQuery ->
 		
 		jQuery(new_nested_fields_container).find("input:text").val("")
 		jQuery(new_nested_fields_container).appendTo("#questions")
-
-	jQuery("#suppr_question").click ->
-		if(jQuery(".nested-fields".length > 1) {
-		jQuery(".nested-fields").last().remove()
-		}
-		else {
-		alert("Impossible de supprimer la première question")
-		}
-		end
