@@ -1,14 +1,15 @@
-<h1>Listing users</h1>
+#encoding: utf-8
+<h1>Utilisateurs</h1>
 
 <table>
   <tr>
-    <th>Last name</th>
-    <th>First name</th>
+    <th>Nom</th>
+    <th>Prénom</th>
     <th>Age</th>
     <th>Tel</th>
     <th>Email</th>
-    <th>Location</th>
-    <th>Society</th>
+    <th>Adresse</th>
+    <th>Société</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,9 +24,9 @@
     <td><%= user.email %></td>
     <td><%= user.location %></td>
     <td><%= user.society %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete %></td>
+    <td><%= link_to 'Voir', user %></td>
+    <td><%= link_to 'Editer', edit_user_path(user) %></td>
+    <td><%= link_to 'Supprimer', user, method: :delete %></td>
   </tr>
 <% end %>
 </table>

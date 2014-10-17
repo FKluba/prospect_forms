@@ -1,4 +1,7 @@
 ProspectForms::Application.routes.draw do
+  resources :tokens
+
+
   resources :forms
 
 

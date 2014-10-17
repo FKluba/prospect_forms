@@ -1,3 +1,4 @@
+#encoding: utf-8
 class FormsController < ApplicationController
   # GET /forms
   # GET /forms.json
@@ -48,10 +49,11 @@ class FormsController < ApplicationController
     @form = Form.new(params[:form])
     #raise @form.inspect
     #raise params[:form].inspect  #raise to inspect params
-    #raise @form.questions.inspect
+    #raise @form.users.inspect
+    raise @form.user_ids.inspect
     respond_to do |format|
       if @form.save
-        format.html { redirect_to @form, notice: 'Form was successfully created.' }
+        format.html { redirect_to @form, notice: 'Formulaire créé avec succès' }
         format.json { render json: @form, status: :created, location: @form }
       else
         format.html { render action: "new" }
@@ -67,9 +69,10 @@ class FormsController < ApplicationController
     #params[:form].delete :questions_attributes
     @form = Form.find(params[:id])
 
+
     respond_to do |format|
       if @form.update_attributes(params[:form])
-        format.html { redirect_to @form, notice: 'Form was successfully updated.' }
+        format.html { redirect_to forms_path, notice: 'Formulaire mis à jour' } #changed redirect because show = prospect form
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

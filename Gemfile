@@ -21,6 +21,8 @@ gem 'simple_form'
 
 gem "font-awesome-rails"
 
+gem 'chosen-rails'
+
 gem 'mm-nested-attrs', :git => "https://github.com/dfabreguette-ap/mm-nested-attrs"
 # gem 'mm-nested-attrs', :path => "/Users/davidfabreguette/Sites/mm-nested-attrs"
 

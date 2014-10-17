@@ -1,4 +1,5 @@
 # Additional translations at http://github.com/plataformatec/devise/wiki/I18n
+#encoding: utf-8
 
 en:
   errors:
@@ -13,8 +14,8 @@ en:
 
   devise:
     failure:
-      already_authenticated: 'You are already signed in.'
-      unauthenticated: 'You need to sign in or sign up before continuing.'
+      already_authenticated: 'Vous êtes déjà connecté.'
+      unauthenticated: 'Vous devez vous identifier pour continuer.'
       unconfirmed: 'You have to confirm your account before continuing.'
       locked: 'Your account is locked.'
       invalid: 'Invalid email or password.'
@@ -22,8 +23,8 @@ en:
       timeout: 'Your session expired, please sign in again to continue.'
       inactive: 'Your account was not activated yet.'
     sessions:
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
+      signed_in: 'Connecté avec succès.'
+      signed_out: 'Déconnecté avec succès.'
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Your password was changed successfully. You are now signed in.'

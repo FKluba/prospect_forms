@@ -4,9 +4,10 @@
     <div class="form-inputs">
       <%= f.input :name %>
       <%= f.input :description %>
+      <%= f.input :user_ids, as: :select, :collection => User.all.map{|u| [u.full_name, u.id]}, input_html: {class: 'chosen-select', multiple: true} %>
     </div>
 
-    <h3> Questions </h3>
+    <h3 class="align-center"> Questions </h3>
 
     <div class="sub-form">
         <div id="questions">
@@ -15,13 +16,13 @@
           <% end %>
         </div>
         <div id="add_question" class="sub-form-add">
-          Ajouter une question
+          Ajouter
         </div>
 
     </div>
 
     <div class="form-actions">
-      <%= link_to 'Retour', forms_path %>
+      <%= link_to 'Annuler', forms_path %>
       <div class="float-right"> <%= f.button :submit %> </div>
     </div>
 <% end %>

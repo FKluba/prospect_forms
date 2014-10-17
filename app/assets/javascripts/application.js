@@ -15,3 +15,5 @@
 //= require twitter/bootstrap
 //= require_tree .
 //= require mm-nested-attrs
+//= require chosen-jquery
+//= require forms

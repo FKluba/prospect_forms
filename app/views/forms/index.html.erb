@@ -1,9 +1,11 @@
-<h1>Listing forms</h1>
+#encoding: utf-8
+<div class="form_container"
+<h1>Formulaires</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Description</th>
+    <th class="form_option">Name</th>
+    <th class="form_option">Description</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +15,12 @@
   <tr>
     <td><%= form.name %></td>
     <td><%= form.description %></td>
-    <td><%= link_to 'Show', form %></td>
-    <td><%= link_to 'Edit', edit_form_path(form) %></td>
-    <td><%= link_to 'Destroy', form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td class="form_option"><%= link_to 'Voir', form %></td>
+    <td class="form_option"><%= link_to 'Editer', edit_form_path(form) %></td>
+    <td class="form_option"><%= link_to 'Supprimer', form, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Form', new_form_path %>
+<%= link_to 'Nouveau', new_form_path %>
